@@ -8,13 +8,13 @@ describe 'Apivore::Swagger' do
 
     subject { swagger }
     it { should be_an_instance_of(Apivore::Swagger) }
-    it { should respond_to(:version) }
+    it { should respond_to(:openapi_version) }
     it { should respond_to(:validate) }
     it { should respond_to(:each_response) }
     it { should respond_to(:base_path) }
 
     describe 'swagger version' do
-      subject { swagger.version }
+      subject { swagger.openapi_version }
       it { should == '2.0' }
     end
 
