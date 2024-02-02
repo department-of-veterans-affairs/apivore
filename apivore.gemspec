@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
 
   s.add_runtime_dependency 'actionpack', '>= 4'
   s.add_runtime_dependency 'hashie', '~> 5.0'
-  s.add_runtime_dependency 'json-schema', '~> 3.0'
+  s.add_runtime_dependency 'json-schema', '~> 4.0'
   s.add_runtime_dependency 'rspec', '~> 3'
   s.add_runtime_dependency 'rspec-expectations', '~> 3.1'
   s.add_runtime_dependency 'rspec-mocks', '~> 3.1'

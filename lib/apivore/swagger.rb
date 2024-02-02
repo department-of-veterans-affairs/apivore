@@ -7,16 +7,16 @@ module Apivore
     NONVERB_PATH_ITEMS = %q(parameters)
 
     def validate
-      case version
+      case openapi_version
       when '2.0'
         schema = File.read(File.expand_path("../../../data/swagger_2.0_schema.json", __FILE__))
       else
-        raise "Unknown/unsupported Swagger version to validate against: #{version}"
+        raise "Unknown/unsupported Swagger version to validate against: #{openapi_version}"
       end
       JSON::Validator.fully_validate(schema, self)
     end
 
-    def version
+    def openapi_version
       swagger
     end
 
